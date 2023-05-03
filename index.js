@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 // const cors = require("cors");
 const port = process.env.PORT || 5000;
-// const slider = require("./data/slider.json");
+const chefs = require("./data/chefs.json");
 // const news = require("./data/news.json");
 
 // app.use(cors());
@@ -11,9 +11,9 @@ app.get("/", (req, res) => {
   res.send("Assignment 10 is running");
 });
 
-// app.get("/categories", (req, res) => {
-//   res.send(categories);
-// });
+app.get("/chefs", (req, res) => {
+  res.send(chefs);
+});
 
 //show all news
 // app.get("/news", (req, res) => {

@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Chef Jane Smith",
-    "img": "https://gourmand.qodeinteractive.com/wp-content/uploads/2018/01/h1-team-member-1.jpg",
+    "img": "https://gourmand.qodeinteractive.com/wp-content/uploads/2018/01/team-member-6.jpg",
     "experience": 7,
     "total_recipes_cooked": 300,
     "total_likes": 8000,
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Chef Lee",
-    "img": "https://gourmand.qodeinteractive.com/wp-content/uploads/2018/01/h1-team-member-2.jpg",
+    "img": "https://gourmand.qodeinteractive.com/wp-content/uploads/2018/01/team-member-5.jpg",
     "experience": 5,
     "total_recipes_cooked": 200,
     "total_likes": 5000,
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Chef Rachel Chen",
-    "img": "https://gourmand.qodeinteractive.com/wp-content/uploads/2018/01/h1-team-member-3.jpg",
+    "img": "https://gourmand.qodeinteractive.com/wp-content/uploads/2018/01/team-member-4.jpg",
     "experience": 8,
     "total_recipes_cooked": 400,
     "total_likes": 9000,

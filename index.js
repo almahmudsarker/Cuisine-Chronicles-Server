@@ -1,19 +1,21 @@
 const express = require("express");
 const app = express();
-// const cors = require("cors");
+const cors = require("cors");
 const port = process.env.PORT || 5000;
 const chefs = require("./data/chefs.json");
 const recipe = require("./data/recipe.json");
 
-// app.use(cors());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Assignment 10 is running");
 });
+
 //all chefs
 app.get("/chefs", (req, res) => {
   res.send(chefs);
 });
+
 // //specific chefs
 app.get("/chefs/:id", (req, res) => {
   const id = req.params.id;
@@ -24,6 +26,8 @@ app.get("/chefs/:id", (req, res) => {
     res.send(specificChefs);
   }
 });
+
+
 
 //all recipe
 app.get("/recipe", (req, res) => {

@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-const cors = require("cors");
+// const cors = require("cors");
 const port = process.env.PORT || 5000;
 const chefs = require("./data/chefs.json");
 const recipe = require("./data/recipe.json");
 
-app.use(cors());
+// app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Assignment 10 is running");

@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-// const cors = require("cors");
+const cors = require("cors");
 const port = process.env.PORT || 5000;
 const chefs = require("./data/chefs.json");
 const recipe = require("./data/recipe.json");
 
-// app.use(cors());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Assignment 10 is running");
@@ -14,6 +14,17 @@ app.get("/", (req, res) => {
 app.get("/chefs", (req, res) => {
   res.send(chefs);
 });
+// //specific chefs
+app.get("/chefs/:id", (req, res) => {
+  const id = req.params.id;
+  if (id === 0) {
+    res.send(chefs);
+  } else {
+    const specificChefs = chefs.filter((n) => n.id === id);
+    res.send(specificChefs);
+  }
+});
+
 //all recipe
 app.get("/recipe", (req, res) => {
   res.send(recipe);
@@ -22,7 +33,7 @@ app.get("/recipe", (req, res) => {
 // //specific recipe
 app.get("/recipe/:id", (req, res) => {
   const id = req.params.id;
-  const selectedRecipe = recipe.find((r) => r._id === id);
+  const selectedRecipe = recipe.find((r) => r.id === id);
   res.send(selectedRecipe);
 });
 
